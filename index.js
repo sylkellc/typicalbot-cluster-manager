@@ -8,13 +8,13 @@ const node = new Node("manager")
     .on('message', async message => {
         const { event, data } = message.data;
 
-        console.log(Array.from(node.server.clients)[0]);
+        console.log(Array.from(node.server.clients)[0][0]);
 
         if (event === "collectData") {
             message.reply(
                 await Promise
                     .all(Array.from(node.server.clients)
-                        .filter(c => /\d+$/.test(c.name))
+                        .filter(c => /\d+$/.test(c[0]))
                         .map(s => s[1].send({
                             event: "collectData",
                             data
