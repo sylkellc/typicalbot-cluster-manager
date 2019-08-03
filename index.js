@@ -8,6 +8,8 @@ const node = new Node("manager")
     .on('message', async message => {
         const { event, data } = message.data;
 
+        console.log(Array.from(node.server.clients)[0]);
+
         if (event === "collectData") {
             message.reply(
                 await Promise
