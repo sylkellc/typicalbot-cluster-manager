@@ -1,5 +1,5 @@
 const { Node } = require("veza");
-const config = require("config");
+const config = require("./config");
 
 const node = new Node("manager")
     .on('error', (error, client) => console.error(`[IPC] Error from ${client.name}`, error))
