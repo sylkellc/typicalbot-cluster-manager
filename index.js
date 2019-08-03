@@ -11,12 +11,12 @@ const node = new Node("manager")
         if (event === "collectData") {
             message.reply(
                 await Promise
-                .all(Array.from(node.server.clients)
-                .map(s => s[1].send({
-                    event: "collectData",
-                    data
-                }, { receptive: true })))
-                .then(results => results.reduce((a, c) => a + c))
+                    .all(Array.from(node.server.clients)
+                        .map(s => s[1].send({
+                            event: "collectData",
+                            data
+                        }, { receptive: true })))
+                    .then(results => results.reduce((a, c) => a + c))
             );
         } else if (event === "ready") {
             console.log(message.data.message);
