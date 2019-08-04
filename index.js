@@ -22,7 +22,7 @@ const node = new Node("manager")
         } else if (event === "ready") {
             console.log(message.data.message);
         } else if (event === "sendTo") {
-            node.sendTo(message.data.to, data, { receptive: true }).then(reply => message.reply(reply));
+            node.sendTo(message.data.to, data.data, { receptive: true }).then(reply => message.reply(reply));
         }
     });
 
