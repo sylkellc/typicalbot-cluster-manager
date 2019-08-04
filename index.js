@@ -19,8 +19,6 @@ const node = new Node("manager")
                         }, { receptive: true })))
                     .then(results => results.reduce((a, c) => a + c))
             );
-        } else if (event === "ready") {
-            console.log(message.data.message);
         } else if (event === "sendTo") {
             node.sendTo(message.data.to, data, { receptive: true }).then(reply => message.reply(reply));
         }
