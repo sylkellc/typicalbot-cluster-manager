@@ -1,9 +1,10 @@
-name: ESLint
+name: Lint
 
 on:
   push:
     branches:
     - master
+    - 3.0.0-beta
   pull_request:
 
 jobs:
@@ -12,15 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: install node v10
+    - name: install node v12
       uses: actions/setup-node@v1
       with:
-        node-version: 10
-    - name: npm
-      run: npm install
+        node-version: 12
+    - name: yarn
+      run: yarn --ignore-scripts
     - name: eslint
-      uses: gimenete/eslint-action@1.0
+      uses: discordjs/action-eslint@v1
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         job-name: eslint
