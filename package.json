@@ -2,18 +2,17 @@
     "name": "typicalbot-cluster-manager",
     "version": "1.0.0",
     "description": "",
+    "license": "Apache-2.0",
     "main": "index.js",
-    "dependencies": {
-        "veza": "^1.1.0"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/typicalbot/typicalbot-cluster-manager.git"
     },
-    "author": "typicalbot",
-    "license": "Apache-2.0",
     "bugs": {
         "url": "https://github.com/typicalbot/typicalbot-cluster-manager/issues"
     },
-    "homepage": "https://github.com/typicalbot/typicalbot-cluster-manager#readme"
+    "homepage": "https://github.com/typicalbot/typicalbot-cluster-manager#readme",
+    "dependencies": {
+        "veza": "^1.1.0"
+    }
 }
