@@ -19,7 +19,7 @@ jobs:
     - name: npm
       run: npm install
     - name: eslint
-      uses: discordjs/action-eslint@v1
+      uses: gimenete/eslint-action@1.0
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       with:
