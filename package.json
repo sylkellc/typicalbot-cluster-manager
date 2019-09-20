@@ -20,6 +20,13 @@
         "veza": "^1.1.0"
     },
     "devDependencies": {
-        "eslint": "^6.4.0"
+        "babel-eslint": "^10.0.3",
+        "eslint": "^6.4.0",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-config-typicalbot": "github:typicalbot/typicalbot-eslint",
+        "eslint-plugin-import": "^2.18.2"
+    },
+    "eslintConfig": {
+        "extends": "eslint-config-typicalbot"
     }
 }
