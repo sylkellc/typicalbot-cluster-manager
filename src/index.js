@@ -18,9 +18,9 @@ const { Server } = require("veza");
 const config = require("../config");
 
 const node = new Server("manager")
-    .on('error', (error, client) => console.error(`[IPC] Error from ${client.name}`, error))
-    .on('connect', client => console.log(`[IPC] Client Connected: ${client.name}`))
-    .on('disconnect', client => console.log(`[IPC] Client Destroyed: ${client.name}`))
+    .on('error', (error, client) => console.error(`[IPC] Error from ${client.name}`, error)) // eslint-disable-line no-console
+    .on('connect', client => console.log(`[IPC] Client Connected: ${client.name}`)) // eslint-disable-line no-console
+    .on('disconnect', client => console.log(`[IPC] Client Destroyed: ${client.name}`)) // eslint-disable-line no-console
     .on('message', async message => {
         const { event, data } = message.data;
 
@@ -40,4 +40,4 @@ const node = new Server("manager")
         }
     });
 
-node.listen(config.port).catch(error => console.error('[IPC] Disconnected!', error));
+node.listen(config.port).catch(error => console.error('[IPC] Disconnected!', error)); // eslint-disable-line no-console
