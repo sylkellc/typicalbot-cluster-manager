@@ -22,7 +22,7 @@
         "veza": "^1.1.0"
     },
     "devDependencies": {
-        "eslint-config-typicalbot": "github:typicalbot/typicalbot-eslint"
+        "eslint-config-typicalbot": "github:typicalbot/eslint-config-typicalbot"
     },
     "eslintConfig": {
         "extends": "eslint-config-typicalbot"
