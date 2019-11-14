@@ -16,7 +16,6 @@ pids
 node_modules/
 
 # Custom
-package-lock.json
+config.json
 package-lock.json
 .vs/*
-config.json
